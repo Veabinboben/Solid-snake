@@ -8,7 +8,7 @@ using namespace std;
 
 
 
-float dot(vec& a, vec& b) 
+float dot(vec& a, vec& b)
 {
     return a.x * b.x + a.y * b.y + a.z * b.z;
 }
@@ -28,7 +28,7 @@ inline float MAX(float a, float b)
     return a < b ? b : a;
 }
 
-float spherecon(vec ro, vec rd, float rad, vec cen, wchar_t &put) // пересечение со сферой с радиусом rad в точке cen
+float spherecon(vec ro, vec rd, float rad, vec cen, wchar_t &put)
 {
     wchar_t gradient[9] = { '.',':','-','=','+','*' ,'#' ,'%', '@' };
     float pos = 0;
@@ -52,7 +52,7 @@ float spherecon(vec ro, vec rd, float rad, vec cen, wchar_t &put) // пересечение
     return -1;
 }
 
-float cubecon(vec ro, vec rd, vec size, vec cen, int &type) // AABB куб с центров в точке cen и размерами size
+float cubecon(vec ro, vec rd, vec size, vec cen, int &type) // AABB
 {
     //wchar_t gradient[6] = { '=','+','*' ,'#' ,'%', '@' };
 
@@ -84,8 +84,8 @@ float cubecon(vec ro, vec rd, vec size, vec cen, int &type) // AABB куб с центро
 
     return -1;
 }
-// пересечени€ с каждым элементом змейки
-wchar_t projectcubessnake(vec ro, vec rd,snake &player) 
+
+wchar_t projectcubessnake(vec ro, vec rd,snake &player)
 {
     wchar_t gradient[9] = { '.',':','-','=','+','*' ,'#' ,'%', '@' };
     wchar_t out = ' ';
@@ -129,7 +129,7 @@ wchar_t projectcubessnake(vec ro, vec rd,snake &player)
 
     return out;
 }
- // пересечени€   с €годами
+
 wchar_t projectspheresberry(vec ro, vec rd, berry& fruit)
 {
     wchar_t out = ' ', put = ' ';
@@ -154,7 +154,7 @@ wchar_t projectcubesberry(vec ro, vec rd, berry& fruit)
     out = gradient[type];
     return out;
 }
-// пересечение с границами 
+
 wchar_t projectborders(vec ro, vec rd,int coff)
 {
     wchar_t gradient[9] = { '.',':','-','=','+','*' ,'#' ,'%', '@' };

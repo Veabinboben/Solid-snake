@@ -30,7 +30,7 @@ wchar_t berrybody = 44;
 		gamefield[x + y * gamefieldsize] = berrybody;
 		return;
 	}
-	void berry::draw2D() // рудимент функция для 2д
+	void berry::draw2D()
 	{
 
 		SetConsoleCursorPosition(console, { (short)x,(short)y });
@@ -115,7 +115,7 @@ wchar_t berrybody = 44;
 		}
 		return;
 	}
-	void snake::draw2D()// рудимент функция для 2д
+	void snake::draw2D()
 	{
 		for (int i = 0; i < this->length; i++)
 		{

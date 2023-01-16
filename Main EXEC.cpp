@@ -1,4 +1,10 @@
 
+
+/*
+scoring
+options (snake type, gamefieldsize, speed)
+file read
+*/
 #include <fstream>
 #include <iostream>
 #include <Windows.h>
@@ -6,12 +12,15 @@
 #include "ScreenSpecs.h";
 #include "3D.h";
 
+
+
+
 using namespace std;
 
  HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
  COORD cord = { 200,70 };
 
- double  aspect = (68.0 / 32.0); // соотношение сторон символла в консоли
+ double  aspect = (68.0 / 32.0);
  bool ison = 1;
  int menudelay = 400;
 
@@ -22,8 +31,14 @@ using namespace std;
  int horiz = 200;
  int vert = 50;
 
+
+
+
  CHAR_INFO* display;
  wchar_t* gamefield;
+
+// (double(horiz) / vert)
+
 
 void GameSetScreenout()
 {
